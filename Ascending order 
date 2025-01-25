@@ -1,0 +1,14 @@
+def ascending_order(list):
+    my_list = []
+    for num in list:  
+        if len(my_list) == 0 or num >= my_list[-1]:
+            my_list.append(num)
+        else:
+            for r in range(len(my_list)):
+                if num < my_list[r]:
+                    my_list.insert(r, num)
+                    break
+    return my_list
+result= [34, 12, 5, 65, 23, 8,-52, -89, -5824, 70.25, -58.02, 7/5, 58/3.6, 90/-98.69] 
+my_list = ascending_order(result)
+print("The output list:", my_list)
